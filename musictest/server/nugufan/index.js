@@ -15,7 +15,7 @@ const nugufan = function (req, res, next){
             parameters = requestBody.action.parameters
         }
     }
-
+    console.log("소연아 유진아 안녕");
     const context = requestBody.action.context;     // 컨텍스트, OAuth연결시 토큰이 들어온다.
     const actionName = requestBody.action.actionName;   // action의 이름
 

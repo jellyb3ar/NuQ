@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../views/bootstrap.min.css" type="text/css">
+	<title> NuguFan Server </title>
+	<style>
+		body {
+
+			padding: 30px;
+			background: url('E:/Programming/Node.js/workspace/NuQ/img/nugufan_logo.PNG');
+			text-align: center;
+		}
+		.contents{
+			background: #fff;
+			padding: 20px;
+			margin: auto;
+			opacity: 0.7;
+			text-align: center;
+		}
+		.contents button{
+			width: 100px;
+			opacity: 0.9;
+			background: #000;
+		}
+		h1 {
+			color: #333333;
+			font-size: 60px;
+		}
+		h2 {
+			color: #2e2e2e;
+			font-size: 28px;
+		}
+		a {
+			color: #2f2f2f;
+			font-size: 18px
+		}
+		
+	</style>
+</head>
+<SCRIPT languate="javaScript">
+	function isNull(){
+		theForm = document.inputForm;
+		if(theForm.artist_name.value==""||theForm.music_name.value==""){
+			alert("필수 입력란이 비었습니다. 다시 확인해주세요.");
+			return false;
+		}else{
+			return true
+		}
+	}
+</SCRIPT>
+<body>
+	<div class="container contents">
+	<h1>  NuguFan Demo Service </h1>
+	<hr>
+	<h2> This is the NuguFan Demo Service</h2>
+	<h3> Please insert the artist name and music name </h3>
+    <hr>
+	<form action="../routes/index.js/search", method="get",name="inputForm">
+		<div class="artist_space">
+			<h4>Artist name</h4>
+			<input type="text" id="artist_name" name="artist_name" required minlength="1" maxlength="100" size="20">
+		</div>
+		<!-- <div class="music_space">
+			<h4>Music name</h4>
+			<input type="text" id="music_name" name="music_name" required minlength="1" maxlength="100" size="20">
+		</div> -->
+        <input type="submit" value="Search" id="isNull">
+    </form>	
+</body>
+</html>
